@@ -79,7 +79,6 @@ export default function MainPage({
   /* =========================
      state
   ========================= */
-
   const [trips, setTrips] = useState([])
 
   const [profile, setProfile] =
@@ -239,6 +238,13 @@ export default function MainPage({
 
   return (
     <div>
+
+      <Header
+        onLogout={onLogout}
+        setPage={setPage}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
 
       {/* =========================
           Header
