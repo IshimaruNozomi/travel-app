@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Header.css'
 
-export default function Header({ onLogout, setPage, darkMode,setDarkMode }) {
+export default function Header({ onLogout, setPage }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -21,10 +21,6 @@ export default function Header({ onLogout, setPage, darkMode,setDarkMode }) {
         <div className="header-dropdown">
           <button onClick={() => setPage('profile')}>
             プロフィール
-          </button>
-
-          <button onClick={() => setDarkMode(!darkMode)}>
-            {darkMode ? 'ライトモード' : 'ダークモード'}
           </button>
 
           <button onClick={onLogout}>
